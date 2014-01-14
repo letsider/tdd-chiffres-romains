@@ -38,5 +38,6 @@ public class ApplicationTest {
 	assert_en_romain(0,"");
 	assert_en_romain(1,"I");
 	assert_en_romain(2,"II");
+	assert_en_romain(3,"III");
     }
 }

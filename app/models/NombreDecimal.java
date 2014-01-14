@@ -13,16 +13,17 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-	if(valeur==1)
-	{
-		return "I";
-	}
-	else 
-	{
-		return "";
-	}
-
-
+		switch(valeur)
+		{
+			case 1: 
+				return "I";
+			case 2: 
+				return "II";
+			case 3: 
+				return "III";
+			default: 
+				return "";
+		}
 	
     }
 }
