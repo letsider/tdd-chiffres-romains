@@ -55,5 +55,16 @@ public class ApplicationTest {
 	assert_en_romain(70,"LXX");
 	assert_en_romain(80,"LXXX");
 	assert_en_romain(90,"XC");
+
+	assert_en_romain(100,"C");
+	assert_en_romain(200,"CC");
+	assert_en_romain(300,"CCC");
+	assert_en_romain(400,"CD");
+	assert_en_romain(500,"D");
+	assert_en_romain(600,"DC");
+	assert_en_romain(700,"DCC");
+	assert_en_romain(800,"DCCC");
+	assert_en_romain(900,"CM");
+
     }
 }

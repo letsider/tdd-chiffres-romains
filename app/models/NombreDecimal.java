@@ -13,14 +13,20 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-		if (valeur>9){
-        return en_romain_dizaines(valeur);
+		if (valeur>99)
+        {
+            return en_romain_centaines(valeur);
+        }
+        else if (valeur>9)
+        {
+            return en_romain_dizaines(valeur);
+        }
+        else 
+        {
+            return en_romain_unites(valeur);
+        }
+
     }
-    else
-    {
-        return en_romain_unites(valeur);
-    }
-}
 
 
 
@@ -49,6 +55,18 @@ public class NombreDecimal {
         "XC"
     };
 
+    static String[] table_centaines = {
+        "C",
+        "CC",
+        "CCC",
+        "CD",
+        "D",
+        "DC",
+        "DCC",
+        "DCCC",
+        "CM"
+    };
+
     String en_romain_unites(int n)
     {
     	return table_unites[n];
@@ -58,6 +76,12 @@ public class NombreDecimal {
     {
         return table_dizaines[n/10-1];
     }
+
+    String en_romain_centaines(int n)
+    {
+        return table_centaines[n/100-1];
+    }
+
 
 
 }
