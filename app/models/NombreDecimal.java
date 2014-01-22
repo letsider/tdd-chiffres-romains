@@ -13,12 +13,14 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-		
-    	return en_romain_unites(valeur);
-    	
-
-	
+		if (valeur>9){
+        return en_romain_dizaines(valeur);
     }
+    else
+    {
+        return en_romain_unites(valeur);
+    }
+}
 
 
 
@@ -32,11 +34,29 @@ public class NombreDecimal {
     	"VI",
     	"VII",
     	"VIII",
-    	"IX" };
+    	"IX"
+    };
+
+    static String[] table_dizaines = {
+        "X",
+        "XX",
+        "XXX",
+        "XL",
+        "L",
+        "LX",
+        "LXX",
+        "LXXX",
+        "XC"
+    };
 
     String en_romain_unites(int n)
     {
     	return table_unites[n];
+    }
+
+    String en_romain_dizaines(int n)
+    {
+        return table_dizaines[n/10-1];
     }
 
 
