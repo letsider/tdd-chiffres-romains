@@ -13,35 +13,31 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-		// switch(valeur)
-		// {
-		// 	case 1: 
-		// 		return "I";
-		// 	case 2: 
-		// 		return "II";
-		// 	case 3: 
-		// 		return "III";
-		// 	case 4: 
-		// 		return "IV";
-		// 	case 5: 
-		// 		return "V";
-		// 	default: 
-		// 		return "";
-		// }
-
-
-    	String[] chiffresRomain= new String[100];
-
-    	chiffresRomain[0]="";
-    	chiffresRomain[1]="I";
-    	chiffresRomain[2]="II";
-    	chiffresRomain[3]="III";
-    	chiffresRomain[4]="IV";
-    	chiffresRomain[5]="V";
-
-    	return chiffresRomain[valeur];
+		
+    	return en_romain_unites(valeur);
     	
 
 	
     }
+
+
+
+    static String[] table_unites = {
+    	"",
+    	"I",
+    	"II",
+    	"III",
+    	"IV",
+    	"V",
+    	"VI",
+    	"VII",
+    	"VIII",
+    	"IX" };
+
+    String en_romain_unites(int n)
+    {
+    	return table_unites[n];
+    }
+
+
 }
